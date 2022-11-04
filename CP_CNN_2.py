@@ -63,5 +63,5 @@ model.summary()
 # training :- features, labels                                         testing :- features, labels
 model.fit(vgg_features_train, train_target, epochs=50, batch_size=150, validation_data=(vgg_features_val, val_target))
 
-with open("cnn_model2.pickle", "wb") as f:
+with open("cnn_model2.h5", "wb") as f:
     pickle.dump(model, f)
